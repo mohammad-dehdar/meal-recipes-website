@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .loading-bar {
+      @apply h-1 w-32 bg-no-repeat bg-gradient-to-r from-custom-purple to-custom-light-purple;
+      background-size: 60% 100%;
+      animation: loading-bar;
+    }
+  
+    .hidden {
+      @apply hidden;
+    }
+  }

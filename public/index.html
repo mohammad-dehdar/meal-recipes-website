@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-gray-100">
+    <header
+        class="max-w-5xl mx-auto rounded-md mt-5 flex items-center justify-between px-6 py-2 bg-white border-b shadow-lg max-sm:flex-col">
+        <a class="font-bold text-3xl text-gray-900" href="#">
+            search recipes
+        </a>
+        <div class="flex items-center max-sm:mt-7">
+            <input id="search-box"
+                class="flex h-10 rounded-l-md text-sm ring-offset-2 ring-gray-200 border border-gray-300 px-4 py-2 text-gray-900 placeholder-gray-500 focus:outline-none"
+                placeholder="Search..." type="search" />
+            <button id="search-btn" class="relative w-10 h-10 flex items-center justify-center bg-blue-500 rounded-r-md m-">
+                <svg id="search-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-5 h-5 p-3">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-5 h-5 hidden">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div id="emptyMessage" class="hidden w-fit mt-8">
+        <p class="text-center text-3xl font-bold">Search your favorite food</p>
+    </div>
+    <main class="max-w-5xl mx-auto mt-24">
+        <div id="recipes-container" class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Food cards will be injected here by JavaScript -->
+        </div>
+        <div class="text-center mt-4">
+            <button id="load-more-btn"
+                class="py-2 px-4 mb-3 bg-blue-500 text-white text-sm font-medium rounded hover:bg-blue-600 transition-colors hidden">
+                Load More
+            </button>
+        </div>
+        <div id="loading-indicator" class="loading-bar hidden mx-auto mt-4"></div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
